@@ -432,15 +432,6 @@ public class webCrawler {
 				ReportFile.report("couldn't stop dumper", true);
 				
 			}
-			try
-			{
-				imageFinder.CloseImageStream();
-			}
-			catch (Exception ex)
-			{
-				ReportFile.report("couldn't stop image stream", true);
-				
-			}
 			
 		}
 		//	}
