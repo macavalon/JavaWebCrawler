@@ -29,7 +29,7 @@ mReporter.setType("wwwcrawler");
 
 String rootUrl = "www.microsoft.com";
 
-webcrawler webCrawler =  new webCrawler(mHistoryManager, 
+webCrawler webcrawler =  new webCrawler(mHistoryManager, 
                                         mReporter,
                                         rootUrl);
                                         
