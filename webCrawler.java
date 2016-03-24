@@ -49,7 +49,7 @@ public class webCrawler {
 		history = new TreeSet<String>();
         
         //init memory use variables
-        collectionCount = 0;
+
 		maxMemUse = 0;
 		currentMemUse = 0;
 	}

@@ -111,21 +111,21 @@ public class DumperStep  implements Runnable
         }*/
  
 
-        Date articleDate = DateForPage(rootURL);
+        Date articleDate = DateForPage(url);
 
         // have we crawled this url before ?
-        if (history.Contains(originalUrl))
+        if (history.Contains(url))
         {
             
         }
         else
         {
-            history.AddToHistory(originalUrl, new Date());
+            history.AddToHistory(url, new Date());
         }
 
         //ignore pages that don't exist
         StringBuilder goodUrl = new StringBuilder();
-        if (!RemoteFileExists(articleURL, goodUrl))
+        if (!RemoteFileExists(url, goodUrl))
         {
             return;
         }
