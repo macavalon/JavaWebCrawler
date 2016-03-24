@@ -27,7 +27,7 @@ reporter mReporter = new reporter(fileName);
 mReporter.setUsername("admin");
 mReporter.setType("wwwcrawler");
 
-String rootUrl = "www.microsoft.com";
+String rootUrl = "http://www.microsoft.com";    
 
 webCrawler webcrawler =  new webCrawler(mHistoryManager, 
                                         mReporter,

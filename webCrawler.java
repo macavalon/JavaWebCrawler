@@ -29,6 +29,8 @@ public class webCrawler {
 		
 		
 		crawlInfo = new CrawlInfo();
+		dumper = new DumperStep();
+		dumper.Init(_history, _ReportFile, crawlInfo);
 		runDumperThread = null;
 		processedHistory = _history;
         
@@ -216,6 +218,7 @@ public class webCrawler {
 			}
 		}
 		
+		
 		//fb description
 		Elements fbdescriptions = doc.select("meta[property=og:description]");
 		StringBuilder fbdescription = new StringBuilder();
@@ -253,6 +256,10 @@ public class webCrawler {
 			}
 		}
 		
+		if(fbimage.length()==0)
+		{
+			fbimage.append("");
+		}
 		
 		//pass this page content to callback
 		Page page = new Page(URL,doc.text(),links, title,description,fbimage.toString());
